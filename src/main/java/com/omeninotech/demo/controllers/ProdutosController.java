@@ -49,5 +49,12 @@ public class ProdutosController {
 		produtoRepository.save(produto);
 		return "redirect:/";
 	}
+	
+	@GetMapping("/deletar/{id}")
+	public String deletar(@PathVariable("id") UUID id) {
+		Produto produto = produtoRepository.findById(id).get();
+		produtoRepository.delete(produto);
+		return "redirect:/";
+	}
 
 }

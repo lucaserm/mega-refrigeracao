@@ -21,4 +21,11 @@ public class PublicController {
 		model.addAttribute("produtos", produtos);
 		return "public-index.html";
 	}
+	
+	@RequestMapping("/consultar")
+	public String consultar(Model model) {
+		List<Produto> produtos = produtoRepository.findAllByOrderByIdAsc();
+		model.addAttribute("produtos", produtos);
+		return "find-produto.html";
+	}
 }

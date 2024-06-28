@@ -27,20 +27,56 @@ body {
 	<div class="container">
 		<div class="container-fluid mt-2">
 			<h2>Cadastro de Produto</h2>
+			<a href="/" class="btn btn-primary">Voltar</a>
 			<form action="/produtos/salvar" method="post">
 				<div class="form-group">
-					<label>Nome</label> <input type="text" class="form-control"
-						name="nome" th:value="${produto.getNome()}">
+					<label>Nome</label> 
+					<input 
+						type="text" 
+						class="form-control"
+						name="nome"
+						placeholder="NOME DO PRODUTO"
+						th:value="${produto.getNome()}">
 				</div>
 
 				<div class="form-group">
-					<label>Codigo</label> <input type="text" class="form-control"
-						name="codigo" th:value="${produto.getCodigo()}">
+					<label>Codigo</label> 
+						<input 
+							type="text" ]
+							class="form-control"
+							name="codigo"
+							placeholder="CÓDIGO DE BARRAS"
+							th:value="${produto.getCodigo()}">
 				</div>
 
 				<div class="form-group">
-					<label>Quantidade</label> <input type="text" class="form-control"
-						name="quantidade" th:value="${produto.getQuantidade()}">
+					<label>Quantidade</label> 
+						<input 
+							type="text" 
+							class="form-control"
+							name="quantidade"
+							placeholder="QUANTIDADE"
+							th:value="${produto.getQuantidade()}">
+				</div>
+				
+				<div class="form-group">
+					<label>Preço de Compra</label> 
+						<input 
+							type="text" 
+							class="form-control"
+							name="precoCompra"
+							placeholder="PREÇO DE COMPRA"
+							th:value="${produto.getPrecoCompra()}">
+				</div>
+				
+				<div class="form-group">
+					<label>Preço de Venda</label> 
+						<input 
+							type="text" 
+							class="form-control"
+							name="precoVenda" 
+							placeholder="PREÇO DE VENDA"
+							th:value="${produto.getPrecoVenda()}">
 				</div>
 
 				<button class="btn btn-success mt-2">Salvar</button>
