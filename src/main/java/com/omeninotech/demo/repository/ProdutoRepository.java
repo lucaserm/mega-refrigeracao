@@ -9,4 +9,5 @@ import com.omeninotech.demo.models.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, UUID> {
 	public List<Produto> findAllByOrderByIdAsc();
+	public Produto findByCodigo(String codigo);
 }

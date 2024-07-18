@@ -15,6 +15,7 @@ public class Produto {
 
 	private String nome;
 	private String codigo;
+	private String fornecedor;
 	private int quantidade;
 	private double precoCompra;
 	private double precoVenda;
@@ -74,6 +75,14 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+
+	public String getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(String fornecedor) {
+		this.fornecedor = fornecedor;
 	}
 
 }
